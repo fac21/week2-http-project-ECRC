@@ -3,29 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>Week 2 Project 2</title>
 </head>
+<body class='center'>
+    <header>
+       <!-- logo -->
+       <img class='logo' src='images/smile.png' alt='yellow microphone'></img>
+       <h1>Cheer Me Up!</h1>
+    </header>
 
-<body>
+    <main class='stack-lg'>
+        <p>Type in a word that describes what you want to see</p>
+        <form class='stack-md'>
+          <div class='artist stack-sm'>
+            <label for="artist_name">Gif</label><br>
+            <input id="artist_name" name="artist_name" type="search" required />
+          </div>
+          <div class='song stack-sm'>
+            <label for="song_title">Joke</label><br>
+            <input id="song_tite" name="song_title" type="search" required />
+          </div>
+          <div class='sButton stack-sm'>
+            <button id="search_button" type="submit">Cheer Me Up!</button>
+          </div>
 
-    <form>
+            <output id="image"></output>
+            <output id="lyrics"></output>
+            <output id="wikipedia"></output>
+        
+        </form>
+      
+    </main>
 
-        <label for="artist_name">Artist's name:</label>
-        <input id="artist_name" name="artist_name" type="search" required />
-
-
-        <label for="song_title">Song title:</label>
-        <input id="song_tite" name="song_title" type="search" required />
-
-
-        <button id="search_button" type="submit">Search</button>
-
-        <output id="image"></output>
-        <output id="lyrics"></output>
-        <output id="wikipedia"></output>
-
-    </form>
     <script type="text/javascript" src="script.js"></script>
 </body>
 
