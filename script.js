@@ -12,6 +12,7 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
     event.preventDefault();
 
     output.innerHTML = "";
+    output1.innerHTML= "";
 
     const formData = new FormData(form);
     const name = formData.get("gif_name");
