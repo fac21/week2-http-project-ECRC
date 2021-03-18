@@ -29,6 +29,7 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
     const formData = new FormData(form);
     const name = formData.get("artist_name");
 
+
     fetch(`https://api.giphy.com/v1/gifs/random?api_key=${gif_api_key}&tag=${name}&limit=1`)
         .then((response) => {
             if (!response.ok) throw new Error(response.status);
@@ -43,37 +44,40 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
             //output.append(image)
         })
 
-        .then(() => fetch('https://official-joke-api.appspot.com/jokes/ten')
+    .then(() => fetch('https://official-joke-api.appspot.com/jokes/ten')
 
-         .then((response) => {
-          if (!response.ok) throw new Error(response.status);
-          return response.json();
-        })
+        .then((response) => {
+            if (!response.ok) throw new Error(response.status);
+            return response.json();
+        }))
 
-      .then((object) => {
-          console.log(object[0].punchline)
-              //const giphy = document.createElement("img");
-          output.textContent = object[0].setup;
-         // output1.textContent = object[0].punchline;
-      })  
-      
-      .then(setInterval(function() { 
-        (object) => {
-          output1.textContent = object[0].punchline;
+    .then((object) => {
+        // console.log(object[0].punchline)
+        //const giphy = document.createElement("img");
+        output.textContent = object[0].setup;
+        output1.textContent = object[0].punchline;
+
+    })
+
+
+    // .then(setInterval(function() {
+    //     object => {
+    //         console.log(object[0].punchline);
+    //         output1.textContent = object[0].punchline;
+    //     }
+    // }, 3000))
+
+
+
+    .catch((error) => {
+        console.log(error);
+        if (error.message === "404") {
+            output.textContent = `⚠️ Couldn't find ${name}`;
+        } else {
+            output.textContent = "⚠️ Something went wrong";
         }
-      }, 8000))
-  
+    });
 
-
-        .catch((error) => {
-            console.log(error);
-            if (error.message === "404") {
-                output.textContent = `⚠️ Couldn't find ${name}`;
-            } else {
-                output.textContent = "⚠️ Something went wrong";
-            }
-          });
-
-      })
+});
 
 // so far the fetch is working, we just need
