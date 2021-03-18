@@ -1,5 +1,3 @@
-
-
 // fetch('https://api.giphy.com/v1/gifs/random?api_key=Mvtk1VOaZhdRLdIqKzWqgXQ0gnMl894B')
 
 // .then((response) => response.json())
@@ -31,23 +29,27 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
     const name = formData.get("artist_name");
 
     fetch(`https://api.giphy.com/v1/gifs/random?api_key=${gif_api_key}&tag=${name}&limit=1`)
-    .then((response) => {
-      if (!response.ok) throw new Error(response.status);
-      return response.json();
-    })
-    .then((data) => {
-        console.log(data)
-        //const giphy = document.createElement("img");
-        image.src = data.data.image_original_url;
-        image.alt = "";
+        .then((response) => {
+            if (!response.ok) throw new Error(response.status);
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data)
+                //const giphy = document.createElement("img");
+            image.src = data.data.image_original_url;
+            image.alt = "";
 
-        //output.append(image)
-    })
-    .catch((error) => {
-        console.log(error);
-      });
-   
+            //output.append(image)
+        })
+        .catch((error) => {
+            console.log(error);
+            if (error.message === "404") {
+                output.textContent = `⚠️ Couldn't find ${name}`;
+            } else {
+                output.textContent = "⚠️ Something went wrong";
+            }
+        });
 
 })
 
-// so far the fetch is working, we just need 
+// so far the fetch is working, we just need
