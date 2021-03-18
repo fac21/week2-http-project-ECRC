@@ -8,9 +8,10 @@
 // .then(console.log)
 
 const form = document.querySelector("form");
-const output = document.querySelector("output");
+const output = document.querySelector("#image");
 const gif_api_key = "Mvtk1VOaZhdRLdIqKzWqgXQ0gnMl894B";
-const image = document.querySelector("#gif_image")
+const image = document.querySelector("#gif_image");
+const output1 = document.querySelector("#lyrics");
 
 
 // fetch(`https://api.giphy.com/v1/gifs/random?api_key=${gif_api_key}&tag=${name}&limit=1`)
@@ -37,10 +38,33 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
             console.log(data)
                 //const giphy = document.createElement("img");
             image.src = data.data.image_original_url;
-            image.alt = "";
+            image.alt = ""; //add in text hre from image
 
             //output.append(image)
         })
+
+        .then(() => fetch('https://official-joke-api.appspot.com/jokes/ten')
+
+         .then((response) => {
+          if (!response.ok) throw new Error(response.status);
+          return response.json();
+        })
+
+      .then((object) => {
+          console.log(object[0].punchline)
+              //const giphy = document.createElement("img");
+          output.textContent = object[0].setup;
+         // output1.textContent = object[0].punchline;
+      })  
+      
+      .then(setInterval(function() { 
+        (object) => {
+          output1.textContent = object[0].punchline;
+        }
+      }, 8000))
+  
+
+
         .catch((error) => {
             console.log(error);
             if (error.message === "404") {
@@ -48,8 +72,8 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
             } else {
                 output.textContent = "⚠️ Something went wrong";
             }
-        });
+          });
 
-})
+      })
 
 // so far the fetch is working, we just need
