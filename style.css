@@ -8,9 +8,13 @@
     font-family: 'Lilita One', cursive;
 }
 
-body {
+html {
     background-color: #08AEEA;
     background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+    background-repeat: no-repeat;
+}
+
+body {
     color: var(--main-font-colour);
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@ input {
     border: none;
     border-radius: .3rem;
     height: 2rem;
-    width: 100%;
+    width: 200px;
 }
 
 button {
@@ -48,11 +52,14 @@ button {
 button:hover {
     cursor: pointer;
 }
+.jButton {
+    margin-bottom: 1rem;
+}
 .logo {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-top: 50px;
+    width: 175px;
+    height: 175px;
+    object-fit: contain;
+    margin-top: 5px;
 }
 
 h1{
@@ -60,10 +67,9 @@ h1{
     margin-bottom: 0;
 }
 
-
 .center {
     width: 100%;
-    margin: 0vh auto;
+    margin: 0 auto;
 }
 
 .stack-lg > * {
@@ -79,10 +85,7 @@ h1{
 .output-size {
     max-width: 70%;
     max-height: 70%;
-}
-.joke_section {
-    display: block;
-    position: absolute;
+    text-align: center;
 }
 
 .loader {
@@ -101,20 +104,19 @@ h1{
   }
 
   .loader-view {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  display:block;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display:block;
   }
 
 @media only screen and (max-width: 600px){
-    body {
-      background-color: #FBDA61;
-      background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
-      
+    html {
+      background-color: #FF5ACD;
+      background-image: linear-gradient(0deg, #FF5ACD 0%, #FBDA61 100%);
+      background-repeat: no-repeat;
     }
-
 }

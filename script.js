@@ -42,7 +42,7 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
 
 }
 
-else alert("please search for something!");
+else alert("Please search for something!");
 
 });
 
@@ -69,3 +69,4 @@ document.querySelector("#joke_button").addEventListener("click", (event) => {
             }
         });
 })
+
