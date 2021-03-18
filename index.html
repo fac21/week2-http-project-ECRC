@@ -18,25 +18,24 @@
     </header>
 
     <main class='stack-lg'>
-        <p>Type in a word that describes what you want to see</p>
+        <p>find me a Gif</p>
         <form class='stack-md'>
-          <div class='artist stack-sm'>
-            <label for="artist_name">Gif</label><br>
-            <input id="artist_name" name="artist_name" type="search" required />
+          <div class='gif stack-sm'>
+            <label for="gif_name">Gif</label><br>
+            <input id="gif_name" name="gif_name" type="search" required />
           </div>
-          <div class='song stack-sm'>
-            <label for="song_title">Joke</label><br>
-            <input id="song_tite" name="song_title" type="search" required />
-          </div>
+          
           <div class='sButton stack-sm'>
             <button id="search_button" type="submit">Cheer Me Up!</button>
           </div>
 
-            <output id="image"></output>
+          <div class='jButton stack-sm'>
+            <button id="joke_button" type="submit">Show me a joke!</button>
+          </div>
+
             <img id="gif_image">
-            <output id="lyrics"></output>
-            <output id="wikipedia"></output>
-        
+            <output id="joke"></output>
+            <output id="punchline"></output>
         </form>
       
     </main>
