@@ -14,6 +14,7 @@ Wed 4.00-5.00: Evgeny
 Thu 10.30-12.30: Chun
 Thu 11.30-12.30: Rosie
 Thu 11.00-11.30: Chisha
+
 ![](https://media0.giphy.com/media/hTCKadFnm8EGIgEpJn/giphy.gif)
 
 
