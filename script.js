@@ -16,10 +16,10 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
     const formData = new FormData(form);
     const name = formData.get("gif_name");
 
-
+    if (name.length > 0) {
     fetch(`https://api.giphy.com/v1/gifs/random?api_key=${gif_api_key}&tag=${name}&limit=1`)
 
-        .then(document.getElementById("loader").className = "loader-view")
+        .then(document.getElementById("loader").className ="loader-view")
 
         .then((response) => {
             if (!response.ok) throw new Error(response.status);
@@ -38,8 +38,12 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
                 output.textContent = "⚠️ Something went wrong";
             }
         });
-});
 
+}
+
+else alert("please search for something!");
+
+});
 
 document.querySelector("#joke_button").addEventListener("click", (event) => {
 
