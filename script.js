@@ -1,8 +1,9 @@
 const form = document.querySelector("form");
-const output = document.querySelector("#image");
+const output = document.querySelector("#joke");
 const gif_api_key = "Mvtk1VOaZhdRLdIqKzWqgXQ0gnMl894B";
 const image = document.querySelector("#gif_image");
-const output1 = document.querySelector("#lyrics");
+const output1 = document.querySelector("#punchline");
+const joke = document.querySelector("joke_button")
 
 document.querySelector("#search_button").addEventListener("click", (event) => {
 
@@ -11,7 +12,7 @@ document.querySelector("#search_button").addEventListener("click", (event) => {
     output.innerHTML = "";
 
     const formData = new FormData(form);
-    const name = formData.get("artist_name");
+    const name = formData.get("gif_name");
 
 
     fetch(`https://api.giphy.com/v1/gifs/random?api_key=${gif_api_key}&tag=${name}&limit=1`)
