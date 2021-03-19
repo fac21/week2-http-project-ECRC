@@ -1,5 +1,7 @@
 ## Week 2 Project HTTP
 
+<img width="1280" alt="Screenshot 2021-03-19 at 09 13 35" src="https://user-images.githubusercontent.com/57327617/111757799-a08b8400-8893-11eb-8833-da511201c179.png">
+
 Facilitator: Rosie
 Deployment: Evgeny
 Quality: Chisha
@@ -29,6 +31,10 @@ User stories we need to implement:
 Stretch stories we wanted to also implement:
 - As an impatient user, I want to see some indication that data is loading
 - As a confused user, I want to be told when something goes wrong
+
+<img width="1280" alt="Screenshot 2021-03-19 at 09 13 07" src="https://user-images.githubusercontent.com/57327617/111757880-b7ca7180-8893-11eb-8eb9-faa54d7fd2a6.png">
+
+<img width="1280" alt="Screenshot 2021-03-19 at 09 13 22" src="https://user-images.githubusercontent.com/57327617/111757890-ba2ccb80-8893-11eb-8a63-f4f4314d5a9a.png">
 
 ### Plan
 - Split into our pairs by themes
