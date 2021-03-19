@@ -60,7 +60,7 @@ document.querySelector("#joke_button").addEventListener("click", (event) => {
             let interval = setInterval(function() {
                 clearInterval(interval);
                 output1.textContent = punch;
-            }, 3000)
+            }, 1500)
         })
         .catch((error) => {
             console.log(error);
