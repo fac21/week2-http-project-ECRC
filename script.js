@@ -54,9 +54,11 @@ document.querySelector("#joke_button").addEventListener("click", (event) => {
                 return response.json();
             })
         .then((object) => {
+            output1.textContent = "";
             output.textContent = object[0].setup;
             var punch = object[0].punchline;
-            setInterval(function() {
+            let interval = setInterval(function() {
+                clearInterval(interval);
                 output1.textContent = punch;
             }, 3000)
         })
