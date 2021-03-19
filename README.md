@@ -2,9 +2,13 @@
 
 <img width="1280" alt="Screenshot 2021-03-19 at 09 13 35" src="https://user-images.githubusercontent.com/57327617/111757799-a08b8400-8893-11eb-8833-da511201c179.png">
 
+
 Facilitator: Rosie
+
 Deployment: Evgeny
+
 Quality: Chisha
+
 User: Chun
 
 ### Goal of this week's project
